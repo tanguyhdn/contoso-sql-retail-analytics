@@ -1,15 +1,15 @@
 # 🛍️ Contoso Retail SQL Analytics : Store Sales
 
-This SQL portfolio project showcases retail analytics using the `ContosoRetailDW` data warehouse. It focuses on in-store sales from the `FactSales` table and was built entirely with **SQL Server** and **Visual Studio Code**, following best practices for clean SQL, reusable views, and modular analysis. This project analyzes revenue and profitability trends from Contoso's in-store sales using only SQL — no BI tools or external code required.
+This SQL project showcases retail analytics using the `ContosoRetailDW` data warehouse. It focuses on in-store sales from the `FactSales` table and was built entirely with **SQL Server** and **Visual Studio Code**, following best practices for clean SQL, reusable views, and modular analysis. This project analyzes revenue and profitability trends from Contoso's in-store sales using only SQL — no BI tools or external code required.
 
-## 💡 Skills Demonstrated
+## Skills Demonstrated
 - SQL joins and filtering  
 - Creating and querying SQL views  
 - Data warehouse modeling (star schema)  
 - Revenue and profitability analysis  
 - Clean folder and project structure
 
-## 🛠 Tools Used
+## Tools Used
 - SQL Server 2022  
 - SQL Server Management Studio (SSMS)  
 - Visual Studio Code (with SQL Server extension)
