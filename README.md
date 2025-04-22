@@ -79,14 +79,3 @@ SELECT
 FROM vw_CleanedSales
 GROUP BY StoreName
 ORDER BY TotalProfit DESC;
-
----
-
-## 👨‍💻 Author
-
-**Tanguy**  
-
----
-
-for **Part 2**,  we’ll analyze **online sales** and **customer behavior** using `FactOnlineSales` and `DimCustomer`.
-
