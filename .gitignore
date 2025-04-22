@@ -1,0 +1,26 @@
+CREATE OR ALTER VIEW vw_CleanedSales AS
+SELECT
+    fs.SalesKey,
+    fs.OrderDateKey,
+    d.FullDateAlternateKey AS OrderDate,
+    c.CustomerKey,
+    CONCAT(c.FirstName, ' ', c.LastName) AS CustomerName,
+    c.Gender,
+    g.EnglishCountryRegionName AS Country,
+    ps.EnglishProductSubcategoryName AS Subcategory,
+    p.EnglishProductName AS ProductName,
+    p.BrandName,
+    fs.SalesAmount,
+    fs.TotalProductCost,
+    fs.SalesAmount - fs.TotalProductCost AS Profit,
+    fs.OrderQuantity,
+    fs.StoreKey,
+    s.StoreName
+FROM FactSales fs
+JOIN DimDate d ON fs.OrderDateKey = d.DateKey
+JOIN DimCustomer c ON fs.CustomerKey = c.CustomerKey
+JOIN DimGeography g ON c.GeographyKey = g.GeographyKey
+JOIN DimProduct p ON fs.ProductKey = p.ProductKey
+JOIN DimProductSubcategory ps ON p.ProductSubcategoryKey = ps.ProductSubcategoryKey
+JOIN DimStore s ON fs.StoreKey = s.StoreKey
+WHERE fs.SalesAmount > 0;
