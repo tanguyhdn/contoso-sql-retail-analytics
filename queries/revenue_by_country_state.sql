@@ -1,7 +1,7 @@
 -- Revenue by Country and State
 -- Description: Aggregates revenue by geographic location.
 
-USE ContosoRetailDW;
+USE ContosoRetailDW;;
 
 SELECT
     RegionCountryName AS Country,

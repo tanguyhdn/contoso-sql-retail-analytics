@@ -1,8 +1,6 @@
 -- Sales by Product Subcategory
 -- Description: Calculates total revenue by product subcategory.
 
-USE ContosoRetailDW;
-
 SELECT
     Subcategory,
     SUM(SalesAmount) AS TotalRevenue

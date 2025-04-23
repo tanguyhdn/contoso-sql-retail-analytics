@@ -62,20 +62,39 @@ The view `vw_CleanedSales` was created to:
 Stored in the [`queries/`](./queries/) folder:
 
 - `sales_by_subcategory.sql`: Revenue by product subcategory
+- `average_order_value_by_store.sql`: Average order by store
+![Average order by store Output](./results/average_order_value_by_store.png)
 - `monthly_revenue_trend.sql`: Sales trend over time
 - `profit_by_store.sql`: Total profit per store
 - `revenue_by_country_state.sql`: Geographic revenue breakdown
+- `top_brands_by_profit.sql`: Geographic revenue breakdown 
+![Top Brands Output](./results/top_brands_output.png)
+
 
 Each query is modular, readable, and ready to be reused in dashboards or reports.
 
 ---
 
-## Example Query: Profit by Store
+## Example Query: Top 5 Brands by Profit
 
 ```sql
-SELECT
-    StoreName,
+SELECT TOP 10
+    BrandName,
     SUM(Profit) AS TotalProfit
 FROM vw_CleanedSales
-GROUP BY StoreName
+GROUP BY BrandName
 ORDER BY TotalProfit DESC;
+
+---
+
+### Sample Output : Top 5 Brands by Profit
+
+| BrandName       | TotalProfit      |
+|-----------------|------------------|
+| Contoso         | 1,541,898,821.66 |
+| Fabrikam        | 1,392,149,024.49 |
+| Litware         | 802,172,628.46   |
+| Adventure Works | 754,357,256.27   |
+| Proseware       | 700,565,638.82   |
+
+

@@ -1,8 +1,6 @@
 -- Average Order Value by Store
 -- Description: Calculates average revenue per order per store.
 
-USE ContosoRetailDW;
-
 SELECT
     StoreName,
     COUNT(DISTINCT SalesKey) AS TotalOrders,
